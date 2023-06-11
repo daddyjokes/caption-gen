@@ -166,4 +166,5 @@ cython_debug/
 Flicker8k_dataset/
 Flicker8k_text/
 descriptions.txt
+models/
 *.p
