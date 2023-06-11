@@ -161,3 +161,8 @@ cython_debug/
 
 # VS Code
 .vscode/
+
+# Dataset
+Flicker8k_dataset/
+Flicker8k_text/
+descriptions.txt
