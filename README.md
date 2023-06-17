@@ -3,6 +3,7 @@
 Deep Learning models for Image Caption Generation
 
 v1 is based on https://www.analyticsvidhya.com/blog/2021/12/step-by-step-guide-to-build-image-caption-generator-using-deep-learning/
+
 v2 is based on https://huggingface.co/docs/transformers/tasks/image_captioning
 
 Image training dataset from
