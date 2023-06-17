@@ -168,3 +168,6 @@ Flicker8k_text/
 descriptions.txt
 models/
 *.p
+
+# Token
+token.txt
