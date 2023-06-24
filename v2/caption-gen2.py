@@ -13,9 +13,9 @@ with open("token.txt", "r") as f:
 login(access_token)
 
 # Directory name of the text data
-dataset_text_dirname = "Flickr_8k_text"
+dataset_text_dirname = "Flickr8k_text"
 # Directory name of the image data
-dataset_image_dirname = "Flicker8k_dataset"
+dataset_image_dirname = "Flickr8k_Dataset/Flicker8k_Dataset"
 
 def load_file(filepath: str) -> str:
     """
