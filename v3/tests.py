@@ -1,5 +1,5 @@
 import sys
-from transformers import AutoProcessor, AutoModelForCausalLM
+from transformers import AutoProcessor, AutoModelForCausalLM, BlipForConditionalGeneration
 from PIL import Image
 import torch
 
@@ -14,7 +14,7 @@ def main():
             print("Error: can not open image")
             quit()
 
-    checkpoint = "microsoft/git-base"
+    checkpoint = "Salesforce/blip-image-captioning-base"
     model_filepath = "models"
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
