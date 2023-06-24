@@ -138,6 +138,8 @@ args = TrainingArguments(
 )
 def compute_metrics(eval_pred):
     logits, labels = eval_pred.predictions, eval_pred.label_ids
+    if isinstance(logits, tuple):
+        logits = logits[0]
     predicted = logits.argmax(-1)
     decoded_labels = processor.batch_decode(labels, skip_special_tokens=True)
     decoded_predictions = processor.batch_decode(predicted, skip_special_tokens=True)
