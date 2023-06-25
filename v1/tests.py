@@ -1,3 +1,5 @@
+# Run with `python tests.py IMG_PATH`
+
 import sys
 from pickle import load
 import tensorflow as tf
@@ -67,7 +69,7 @@ def main():
     try:
         img = Image.open(img_filepath)
     except:
-        print("Error: can not open image")
+        print("Error: can not load image")
         quit()
 
     features = extract_features(img)

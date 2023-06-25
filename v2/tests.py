@@ -1,3 +1,5 @@
+# Run with `python tests.py IMG_PATH1 IMG_PATH2 ...`
+
 import sys
 from transformers import AutoProcessor, AutoModelForCausalLM
 from PIL import Image

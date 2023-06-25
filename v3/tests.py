@@ -1,5 +1,7 @@
+# Run with `python tests.py IMG_PATH1 IMG_PATH2 ...`
+
 import sys
-from transformers import AutoProcessor, AutoModelForCausalLM, BlipForConditionalGeneration
+from transformers import AutoProcessor, BlipForConditionalGeneration
 from PIL import Image
 import torch
 
@@ -11,7 +13,7 @@ def main():
             img = Image.open(img_filepath)
             images.append(img)
         except:
-            print("Error: can not open image")
+            print("Error: can not load image")
             quit()
 
     checkpoint = "Salesforce/blip-image-captioning-base"
@@ -22,7 +24,7 @@ def main():
     inputs = processor(images=images, return_tensors="pt").to(device)
     pixel_values = inputs.pixel_values
 
-    model = AutoModelForCausalLM.from_pretrained(model_filepath)
+    model = BlipForConditionalGeneration.from_pretrained(model_filepath)
     generated_ids = model.generate(pixel_values=pixel_values, max_length=50)
     descriptions = processor.batch_decode(generated_ids, skip_special_tokens=True)
 

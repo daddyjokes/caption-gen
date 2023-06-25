@@ -1,11 +1,9 @@
 import json
 import random
 from datasets import load_dataset
-from transformers import AutoProcessor, AutoModelForCausalLM, TrainingArguments, Trainer, BlipForConditionalGeneration
+from transformers import AutoProcessor, TrainingArguments, Trainer, BlipForConditionalGeneration
 from evaluate import load
-import torch
 from huggingface_hub import login
-from tqdm import tqdm
 
 # Login with API token
 with open("token.txt", "r") as f:
