@@ -163,11 +163,12 @@ cython_debug/
 .vscode/
 
 # Dataset
-Flicker8k_dataset/
-Flickr_8k_text/
+Flickr8k_Dataset/
+Flickr8k_text/
 descriptions.txt
 models/
 *.p
 
 # Token
 token.txt
+x/

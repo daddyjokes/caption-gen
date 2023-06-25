@@ -132,7 +132,7 @@ args = TrainingArguments(
     logging_strategy="steps",
     logging_steps=10,
     remove_unused_columns=False,
-    push_to_hub=True,
+    push_to_hub=False,
     label_names=["labels"],
     load_best_model_at_end=True,
 )
